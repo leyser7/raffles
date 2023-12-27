@@ -1,0 +1,68 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 10px;
+}
+
+.custom-card-available {
+    background-color: #32de84;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 150px; 
+    height: 150px;
+}
+
+.custom-card-available:hover {
+    box-shadow: 0 10px 20px 0 rgba(50, 222, 132, 0.4);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.custom-card-reserved {
+    background-color: #3b32de;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 150px; 
+    height: 150px;
+}
+
+.custom-card-reserved:hover {
+    box-shadow: 0 10px 20px 0 rgba(50, 222, 132, 0.4);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.custom-card-paid {
+    background-color: #de3232;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 150px; 
+    height: 150px;
+}
+
+.custom-card-paid:hover {
+    box-shadow: 0 10px 20px 0 rgba(50, 222, 132, 0.4);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.card-id {
+    padding-top: 10px;
+    color: #ffffff; 
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.card-name {
+    color: #ffffff; 
+    font-size: 1.5rem;
+    text-align: center;
+} 
+
+

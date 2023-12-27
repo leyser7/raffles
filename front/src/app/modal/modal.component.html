@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Comprar boleta {{ data.id }}</h1>
+<div mat-dialog-content>
+  <p>Cual es tu nombre ?</p>
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="data.name" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label for="prueba">Estado</mat-label>
+    <div>
+      <mat-select placeholder="test placeholder" [(value)]="data.state">
+        @for (state of states; track state) {
+        <mat-option [value]="state.value">{{ state.viewValue }}</mat-option>
+        }
+      </mat-select>
+    </div>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

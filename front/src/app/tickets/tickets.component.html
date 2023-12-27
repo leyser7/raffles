@@ -1,0 +1,21 @@
+<div class="card-container">
+  @for (ticket of tickets; track ticket.name) { @switch (ticket.state) { @case
+  ('reserved') {
+  <div class="card custom-card-reserved" (click)="openDialog(ticket)">
+    <p class="card-title card-id">{{ ticket.id }}</p>
+    <p class="card-text card-name">{{ ticket.name }}</p>
+  </div>
+  } @case ('paid') {
+  <div class="card custom-card-paid" (click)="openDialog(ticket)">
+    <p class="card-title card-id">{{ ticket.id }}</p>
+    <p class="card-text card-name">{{ ticket.name }}</p>
+  </div>
+  } @default {
+  <div class="card custom-card-available" (click)="openDialog(ticket)">
+    <p class="card-title card-id">{{ ticket.id }}</p>
+    <p class="card-text card-name">{{ ticket.name }}</p>
+  </div>
+  } } } @empty {
+  <li>There are no items.</li>
+  }
+</div>
